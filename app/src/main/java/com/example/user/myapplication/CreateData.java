@@ -11,12 +11,10 @@ import android.widget.Toast;
 
 public class CreateData extends Activity implements OnClickListener{
 
-    //inisilisasi elemen-elemen pada layout
     private Button buttonSubmit;
     private EditText edNama;
-    private EditText edMerk;
-    private EditText edHarga;
-    //inisialisasi kontroller/Data Source
+    private EditText edJrsn;
+    private EditText edNim;
     private DBDataSource dataSource;
 
     @Override
@@ -26,50 +24,40 @@ public class CreateData extends Activity implements OnClickListener{
 
         buttonSubmit = (Button) findViewById(R.id.buttom_submit);
         buttonSubmit.setOnClickListener(this);
-        edNama = (EditText) findViewById(R.id.nama_barang);
-        edHarga = (EditText) findViewById(R.id.harga_barang);
-        edMerk = (EditText) findViewById(R.id.merk_barang);
+        edNama = (EditText) findViewById(R.id.nama_mhs);
+        edJrsn = (EditText) findViewById(R.id.jrsn_mhs);
+        edNim = (EditText) findViewById(R.id.nim_mhs);
 
-        // instanstiasi kelas DBDataSource
         dataSource = new DBDataSource(this);
 
-        //membuat sambungan baru ke database
         dataSource.open();
     }
 
-    //KETIKA Tombol Submit Diklik
     @Override
     public void onClick(View v) {
-        // Inisialisasi data barang
+
         String nama = null;
-        String merk = null;
-        String harga = null;
+        String jrsn = null;
+        String nim = null;
         @SuppressWarnings("unused")
 
-        //inisialisasi barang baru (masih kosong)
                 Mahasiswa mahasiswa = null;
-        if(edNama.getText()!=null && edMerk.getText()!=null && edHarga.getText()!=null)
+        if(edNama.getText()!=null && edJrsn.getText()!=null && edNim.getText()!=null)
         {
-            /* jika field nama, merk, dan harga tidak kosong
-             * maka masukkan ke dalam data barang*/
             nama = edNama.getText().toString();
-            merk = edMerk.getText().toString();
-            harga = edHarga.getText().toString();
+            jrsn = edJrsn.getText().toString();
+            nim = edNim.getText().toString();
         }
 
         switch(v.getId())
         {
             case R.id.buttom_submit:
-                // insert data barang baru
-                mahasiswa = dataSource.createBarang(nama, merk, harga);
-
-                //konfirmasi kesuksesan
-                Toast.makeText(this, "masuk Barang\n" +
-                        "nama" + mahasiswa.getNama_barang() +
-                        "merk" + mahasiswa.getMerk_barang() +
-                        "harga" + mahasiswa.getHarga_barang(), Toast.LENGTH_LONG).show();
+                mahasiswa = dataSource.createMahasiswa(nama, jrsn, nim);
+                Toast.makeText(this, "Data masuk dengan \n" +
+                        "Nama : " + mahasiswa.getNama_mhs() +
+                        "\nJurusan :" + mahasiswa.getJrsn_mhs() +
+                        "\nNIM : " + mahasiswa.getNim_mhs(), Toast.LENGTH_LONG).show();
                 break;
         }
-
     }
 }

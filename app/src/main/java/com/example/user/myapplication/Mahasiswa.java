@@ -3,9 +3,9 @@ package com.example.user.myapplication;
 public class Mahasiswa {
 
     private long id;
-    private String nama_barang;
-    private String merk_barang;
-    private String harga_barang;
+    private String nama_mhs;
+    private String jrsn_mhs;
+    private String nim_mhs;
 
     public Mahasiswa()
     {
@@ -20,34 +20,34 @@ public class Mahasiswa {
         this.id = id;
     }
 
-    public String getNama_barang() {
-        return nama_barang;
+    public String getNama_mhs() {
+        return nama_mhs;
     }
 
-    public void setNama_barang(String nama_barang) {
-        this.nama_barang = nama_barang;
+    public void setNama_mhs(String nama_barang) {
+        this.nama_mhs = nama_barang;
     }
 
-    public String getMerk_barang() {
-        return merk_barang;
+    public String getJrsn_mhs() {
+        return jrsn_mhs;
     }
 
-    public void setMerk_barang(String merk_barang) {
-        this.merk_barang = merk_barang;
+    public void setJrsn_mhs(String merk_barang) {
+        this.jrsn_mhs = merk_barang;
     }
 
-    public String getHarga_barang() {
-        return harga_barang;
+    public String getNim_mhs() {
+        return nim_mhs;
     }
 
-    public void setHarga_barang(String harga_barang) {
-        this.harga_barang = harga_barang;
+    public void setNim_mhs(String harga_barang) {
+        this.nim_mhs = harga_barang;
     }
 
     @Override
     public String toString()
     {
-        return "Barang "+ nama_barang +" "+ merk_barang + " "+ harga_barang;
+        return "\nNama : "+ nama_mhs +"\nJurusan :"+ jrsn_mhs + "\nNIM : "+ nim_mhs;
     }
 }
 

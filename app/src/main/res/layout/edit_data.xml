@@ -6,7 +6,7 @@
     android:orientation="vertical"
     >
     <TextView
-        android:id="@+id/text_id_barang"
+        android:id="@+id/text_id_mhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_edit"
@@ -23,12 +23,12 @@
         android:ems="10"
         android:layout_marginTop="15dp"
         android:background="#afffffff"
-        android:layout_below="@id/text_id_barang"
+        android:layout_below="@id/text_id_mhs"
         >
         <requestFocus />
     </EditText>
     <EditText
-        android:id="@+id/editText_merk"
+        android:id="@+id/editText_jrsn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -37,21 +37,21 @@
         android:layout_below="@id/editText_nama"
         />
     <EditText
-        android:id="@+id/editText_harga"
+        android:id="@+id/editText_nim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
         android:layout_marginTop="15dp"
         android:background="#afffffff"
-        android:layout_below="@id/editText_merk"
+        android:layout_below="@id/editText_jrsn"
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_below="@id/editText_harga"
+        android:layout_below="@id/editText_nim"
         >
         <Button
             android:id="@+id/button_save_update"

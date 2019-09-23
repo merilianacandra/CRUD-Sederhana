@@ -1,6 +1,5 @@
 package com.example.user.myapplication;
 
-//deklarasi import package
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -17,7 +16,6 @@ public class DBHelper extends SQLiteOpenHelper{
     private static final String db_name ="inventori.db";
     private static final int db_version=1;
 
-    // Perintah SQL untuk membuat tabel database baru
     private static final String db_create = "create table "
             + TABLE_NAME + "("
             + COLUMN_ID +" integer primary key autoincrement, "
@@ -30,13 +28,11 @@ public class DBHelper extends SQLiteOpenHelper{
         // Auto generated
     }
 
-    //mengeksekusi perintah SQL di atas untuk membuat tabel database baru
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(db_create);
     }
 
-    // dijalankan apabila ingin mengupgrade database
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.w(DBHelper.class.getName(),"Upgrading database from version " + oldVersion + " to "

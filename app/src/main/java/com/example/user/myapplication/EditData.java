@@ -14,13 +14,13 @@ public class EditData extends Activity implements OnClickListener{
     private DBDataSource dataSource;
 
     private long id;
-    private String harga;
-    private String merk;
+    private String nim;
+    private String jrsn;
     private String nama;
 
     private EditText edNama;
-    private EditText edHarga;
-    private EditText edMerk;
+    private EditText edNim;
+    private EditText edJrsn;
 
     private TextView txId;
 
@@ -33,25 +33,25 @@ public class EditData extends Activity implements OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.edit_data);
-        //inisialisasi variabel
+
         edNama = (EditText) findViewById(R.id.editText_nama);
-        edHarga = (EditText) findViewById(R.id.editText_harga);
-        edMerk = (EditText) findViewById(R.id.editText_merk);
-        txId = (TextView) findViewById(R.id.text_id_barang);
-        //buat sambungan baru ke database
+        edNim = (EditText) findViewById(R.id.editText_nim);
+        edJrsn = (EditText) findViewById(R.id.editText_jrsn);
+        txId = (TextView) findViewById(R.id.text_id_mhs);
+
         dataSource = new DBDataSource(this);
         dataSource.open();
-        // ambil data barang dari extras
+
         Bundle bun = this.getIntent().getExtras();
         id = bun.getLong("id");
-        harga = bun.getString("harga");
-        merk = bun.getString("merk");
+        nim = bun.getString("nim");
+        jrsn = bun.getString("jrsn");
         nama = bun.getString("nama");
-        //masukkan data-data barang tersebut ke field editor
+
         txId.append(String.valueOf(id));
         edNama.setText(nama);
-        edHarga.setText(harga);
-        edMerk.setText(merk);
+        edNim.setText(nim);
+        edJrsn.setText(jrsn);
 
         //set listener pada tombol
         btnSave = (Button) findViewById(R.id.button_save_update);
@@ -62,15 +62,15 @@ public class EditData extends Activity implements OnClickListener{
 
     @Override
     public void onClick(View v) {
-        // TODO Auto-generated method stub
+
         switch(v.getId())
         {
-            // apabila tombol save diklik (update barang)
+
             case R.id.button_save_update :
                 mahasiswa = new Mahasiswa();
-                mahasiswa.setHarga_barang(edHarga.getText().toString());
-                mahasiswa.setNama_barang(edNama.getText().toString());
-                mahasiswa.setMerk_barang(edMerk.getText().toString());
+                mahasiswa.setNim_mhs(edNim.getText().toString());
+                mahasiswa.setNama_mhs(edNama.getText().toString());
+                mahasiswa.setJrsn_mhs(edJrsn.getText().toString());
                 mahasiswa.setId(id);
                 dataSource.updateBarang(mahasiswa);
                 Intent i = new Intent(this, ViewData.class);
@@ -78,7 +78,7 @@ public class EditData extends Activity implements OnClickListener{
                 EditData.this.finish();
                 dataSource.close();
                 break;
-            // apabila tombol cancel diklik, finish activity
+
             case R.id.button_cancel_update :
                 finish();
                 dataSource.close();

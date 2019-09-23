@@ -6,34 +6,34 @@
     >
 
     <EditText
-        android:id="@+id/nama_barang"
+        android:id="@+id/nama_mhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:inputType="text"
-        android:hint="Nama Barang"
+        android:hint="NAMA"
         android:ems="10" >
 
         <requestFocus />
     </EditText>
     <EditText
-        android:id="@+id/merk_barang"
+        android:id="@+id/jrsn_mhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:inputType="text"
-        android:hint="Merk Barang"
+        android:hint="Jurusan"
         android:ems="10" >
 
         <requestFocus />
     </EditText>
     <EditText
-        android:id="@+id/harga_barang"
+        android:id="@+id/nim_mhs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:inputType="number"
-        android:hint="Harga Barang"
+        android:hint="NIM"
         android:ems="10" >
 
         <requestFocus />
