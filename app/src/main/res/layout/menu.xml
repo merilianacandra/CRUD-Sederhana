@@ -9,27 +9,31 @@
         android:id="@+id/nama_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:textSize="20sp"
+        android:layout_marginTop="143dp"
         android:text="@string/nama_app"
-        />
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button_tambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="61dp"
         android:layout_below="@id/nama_app"
-        android:layout_centerHorizontal="true"
-        android:text="@string/tombol_tambah"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="62dp"
+        android:text="@string/tombol_tambah" />
 
     <Button
         android:id="@+id/button_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="156dp"
+        android:layout_height="62dp"
         android:layout_below="@id/button_tambah"
-        android:layout_centerHorizontal="true"
-        android:text="@string/tombol_lihat"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="-62dp"
+        android:layout_marginEnd="27dp"
+        android:layout_toEndOf="@+id/button_tambah"
+        android:text="@string/tombol_lihat" />
 </RelativeLayout>

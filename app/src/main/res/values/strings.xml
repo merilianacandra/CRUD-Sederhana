@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">AppInventory</string>
-    <string name="nama_app">twoh.co</string>
+    <string name="app_name">Meriliana_1705551022</string>
+    <string name="nama_app">DATA MAHASISWA</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">AppInventory</string>
@@ -14,6 +14,7 @@
     <string name="tombol_cancel">Cancel</string>
     <string name="tombol_dialog_edit">Edit</string>
     <string name="tombol_dialog_delete">Delete</string>
-    <string name="title_view">Data Barang</string>
-    <string name="title_edit">Edit Barang | ID : </string>
+    <string name="title_view">Data Mahasiswa</string>
+    <string name="title_edit">Edit Data Mahasiswa ID : </string>
+    <string name="title_create">Tambah Data Mahasiswa </string>
 </resources>

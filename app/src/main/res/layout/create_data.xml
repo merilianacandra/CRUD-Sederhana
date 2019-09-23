@@ -5,9 +5,21 @@
     android:orientation="vertical"
     >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/title_create"
+        android:layout_marginLeft="50dp"
+
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <EditText
         android:id="@+id/nama_mhs"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:inputType="text"
@@ -18,7 +30,7 @@
     </EditText>
     <EditText
         android:id="@+id/jrsn_mhs"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:inputType="text"
@@ -29,7 +41,7 @@
     </EditText>
     <EditText
         android:id="@+id/nim_mhs"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:inputType="number"
@@ -41,8 +53,8 @@
 
     <Button
         android:id="@+id/buttom_submit"
-        android:layout_width="wrap_content"
+        android:layout_width="251dp"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        />
+        android:layout_marginLeft="50dp"
+        android:text="Submit" />
 </LinearLayout>

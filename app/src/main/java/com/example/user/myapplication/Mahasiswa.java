@@ -47,7 +47,7 @@ public class Mahasiswa {
     @Override
     public String toString()
     {
-        return "\nNama : "+ nama_mhs +"\nJurusan :"+ jrsn_mhs + "\nNIM : "+ nim_mhs;
+        return "\nNama      : " + nama_mhs +"\nJurusan  :" + jrsn_mhs + "\nNIM         : " + nim_mhs;
     }
 }
 
