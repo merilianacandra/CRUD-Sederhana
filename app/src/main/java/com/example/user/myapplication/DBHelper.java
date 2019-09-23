@@ -10,8 +10,8 @@ public class DBHelper extends SQLiteOpenHelper{
     public static final String TABLE_NAME = "tb_mhs";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NAME = "nama_mhs";
-    public static final String COLUMN_MERK = "merk_mhs";
-    public static final String COLUMN_HARGA = "harga_mhs";
+    public static final String COLUMN_MERK = "jrsn_mhs";
+    public static final String COLUMN_HARGA = "nim_mhs";
     private static final String db_name ="db_mhs.db";
     private static final int db_version=1;
 
