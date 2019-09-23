@@ -6,14 +6,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DBHelper extends SQLiteOpenHelper{
-    /** deklarasi konstanta-konstanta yang digunakan pada database, seperti nama tabel,
-     nama-nama kolom, nama database, dan versi dari database **/
-    public static final String TABLE_NAME = "data_mahasiswa";
+
+    public static final String TABLE_NAME = "tb_mhs";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_NAME = "nama_barang";
     public static final String COLUMN_MERK = "merk_barang";
     public static final String COLUMN_HARGA = "harga_barang";
-    private static final String db_name ="inventori.db";
+    private static final String db_name ="db_mhs.db";
     private static final int db_version=1;
 
     private static final String db_create = "create table "
