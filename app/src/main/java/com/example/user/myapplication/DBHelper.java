@@ -8,7 +8,7 @@ import android.util.Log;
 public class DBHelper extends SQLiteOpenHelper{
     /** deklarasi konstanta-konstanta yang digunakan pada database, seperti nama tabel,
      nama-nama kolom, nama database, dan versi dari database **/
-    public static final String TABLE_NAME = "data_inventori";
+    public static final String TABLE_NAME = "data_mahasiswa";
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_NAME = "nama_barang";
     public static final String COLUMN_MERK = "merk_barang";
